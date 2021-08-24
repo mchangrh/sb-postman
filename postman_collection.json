@@ -1,0 +1,1250 @@
+{
+	"info": {
+		"_postman_id": "68efe2a2-8f2c-4b5e-a4bf-2e0f6c9eccf0",
+		"name": "SponsorBlock PM v266",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Normal Requests",
+			"item": [
+				{
+					"name": "User Information",
+					"item": [
+						{
+							"name": "userInfo Private",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://sponsor.ajay.app/api/userInfo?value=",
+									"protocol": "https",
+									"host": [
+										"sponsor",
+										"ajay",
+										"app"
+									],
+									"path": [
+										"api",
+										"userInfo"
+									],
+									"query": [
+										{
+											"key": "value",
+											"value": "",
+											"description": "[\"userID\", \"userName\", \"minutesSaved\", \"segmentCount\", \"ignoredSegmentCount\",\n  // \"viewCount\", \"ignoredViewCount\", \"warnings\", \"warningReason\", \"reputation\",\n  // \"vip\", \"lastSegmentID\"]"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "userInfo Public",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://sponsor.ajay.app/api/userInfo?publicUserID&value=",
+									"protocol": "https",
+									"host": [
+										"sponsor",
+										"ajay",
+										"app"
+									],
+									"path": [
+										"api",
+										"userInfo"
+									],
+									"query": [
+										{
+											"key": "publicUserID",
+											"value": null,
+											"description": "user to lookup"
+										},
+										{
+											"key": "value",
+											"value": "",
+											"description": "[\"userID\", \"userName\", \"minutesSaved\", \"segmentCount\", \"ignoredSegmentCount\",\n  // \"viewCount\", \"ignoredViewCount\", \"warnings\", \"warningReason\", \"reputation\",\n  // \"vip\", \"lastSegmentID\"]"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getViewsForUser",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://sponsor.ajay.app/api/getViewsForUser",
+									"protocol": "https",
+									"host": [
+										"sponsor",
+										"ajay",
+										"app"
+									],
+									"path": [
+										"api",
+										"getViewsForUser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getSavedTimeForUser",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://sponsor.ajay.app/api/getSavedTimeForUser",
+									"protocol": "https",
+									"host": [
+										"sponsor",
+										"ajay",
+										"app"
+									],
+									"path": [
+										"api",
+										"getSavedTimeForUser"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "username",
+					"item": [
+						{
+							"name": "setUsername",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "https://sponsor.ajay.app/api/setUsername",
+									"protocol": "https",
+									"host": [
+										"sponsor",
+										"ajay",
+										"app"
+									],
+									"path": [
+										"api",
+										"setUsername"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getUsername",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "https://sponsor.ajay.app/api/getUsername",
+									"protocol": "https",
+									"host": [
+										"sponsor",
+										"ajay",
+										"app"
+									],
+									"path": [
+										"api",
+										"getUsername"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "skipSegments",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sponsor.ajay.app/api/skipSegments?videoID",
+							"protocol": "https",
+							"host": [
+								"sponsor",
+								"ajay",
+								"app"
+							],
+							"path": [
+								"api",
+								"skipSegments"
+							],
+							"query": [
+								{
+									"key": "videoID",
+									"value": null,
+									"description": "ID of video to pull segments for"
+								},
+								{
+									"key": "category",
+									"value": null,
+									"description": "See https://github.com/ajayyy/SponsorBlock/wiki/Types#category",
+									"disabled": true
+								},
+								{
+									"key": "categories",
+									"value": null,
+									"description": "use this instead of \"category\"",
+									"disabled": true
+								},
+								{
+									"key": "requiredSegments",
+									"value": null,
+									"description": "list of segment UUIDs to require be retrieved",
+									"disabled": true
+								},
+								{
+									"key": "service",
+									"value": "YouTube",
+									"description": "See https://github.com/ajayyy/SponsorBlock/wiki/Types#service",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "skipSegments SHA256",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sponsor.ajay.app/api/skipSegments?prefix",
+							"protocol": "https",
+							"host": [
+								"sponsor",
+								"ajay",
+								"app"
+							],
+							"path": [
+								"api",
+								"skipSegments"
+							],
+							"query": [
+								{
+									"key": "prefix",
+									"value": null,
+									"description": "Hash of the YouTube videoID"
+								},
+								{
+									"key": "category",
+									"value": null,
+									"description": "See https://github.com/ajayyy/SponsorBlock/wiki/Types#category",
+									"disabled": true
+								},
+								{
+									"key": "categories",
+									"value": null,
+									"description": "use this instead of \"category\"",
+									"disabled": true
+								},
+								{
+									"key": "requiredSegments",
+									"value": null,
+									"description": "list of segment UUIDs to require be retrieved",
+									"disabled": true
+								},
+								{
+									"key": "service",
+									"value": "YouTube",
+									"description": "See https://github.com/ajayyy/SponsorBlock/wiki/Types#service",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "skipSegments PARAM",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://sponsor.ajay.app/api/skipSegments?videoID=&startTime=&endTime=&category=sponsor&userAgent=mchangrh-sbpm/1",
+							"protocol": "https",
+							"host": [
+								"sponsor",
+								"ajay",
+								"app"
+							],
+							"path": [
+								"api",
+								"skipSegments"
+							],
+							"query": [
+								{
+									"key": "videoID",
+									"value": "",
+									"description": "ID of video to make segments for"
+								},
+								{
+									"key": "startTime",
+									"value": "",
+									"description": "float of starting time"
+								},
+								{
+									"key": "endTime",
+									"value": "",
+									"description": "float of ending time"
+								},
+								{
+									"key": "category",
+									"value": "sponsor",
+									"description": "See https://github.com/ajayyy/SponsorBlock/wiki/Types#category"
+								},
+								{
+									"key": "actionType",
+									"value": "skip",
+									"description": "can also be \"mute\"",
+									"disabled": true
+								},
+								{
+									"key": "service",
+									"value": "YouTube",
+									"description": "See https://github.com/ajayyy/SponsorBlock/wiki/Types#service",
+									"disabled": true
+								},
+								{
+									"key": "videoDuration",
+									"value": null,
+									"description": "duration of video",
+									"disabled": true
+								},
+								{
+									"key": "userAgent",
+									"value": "mchangrh-sbpm/1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "skipSegments JSON",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"videoID\": \"\",\r\n  \"userID\": \"\", // This should be a randomly generated UUID stored locally (not the public one)\r\n  \"userAgent\": \"mchangrh-sbpm/1\", // \"Name of Client/Version\" or \"[BOT] Name of Bot/Version\" ex. \"Chromium/1.0.0\"\r\n  \"service\": \"\", // Optional, default is 'YouTube'.\r\n  // See https://github.com/ajayyy/SponsorBlock/wiki/Types#service\r\n  \"videoDuration\": \"\", // Optional, duration of video, will attempt to retrieve from the YouTube API if missing (to be used to determine when a submission is out of date)\r\n\r\n  \"segments\": [{ // Array of this object\r\n     \"segment\": [], // [0, 15.23] start and end time in seconds\r\n     \"category\": \"\",\r\n     \"actionType\": \"skip\" // Optional, defaults to \"skip\", can also be \"mute\"\r\n  }]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://sponsor.ajay.app/api/skipSegments",
+							"protocol": "https",
+							"host": [
+								"sponsor",
+								"ajay",
+								"app"
+							],
+							"path": [
+								"api",
+								"skipSegments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "voteOnSponsorTime Normal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://sponsor.ajay.app/api/voteOnSponsorTime?UUID=&type",
+							"protocol": "https",
+							"host": [
+								"sponsor",
+								"ajay",
+								"app"
+							],
+							"path": [
+								"api",
+								"voteOnSponsorTime"
+							],
+							"query": [
+								{
+									"key": "UUID",
+									"value": "",
+									"description": "UUID of the segment being voted on"
+								},
+								{
+									"key": "type",
+									"value": null,
+									"description": "0 for downvote, 1 for upvote"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "voteOnSponsorTime Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://sponsor.ajay.app/api/voteOnSponsorTime?UUID=&category",
+							"protocol": "https",
+							"host": [
+								"sponsor",
+								"ajay",
+								"app"
+							],
+							"path": [
+								"api",
+								"voteOnSponsorTime"
+							],
+							"query": [
+								{
+									"key": "UUID",
+									"value": "",
+									"description": "UUID of the segment being voted on"
+								},
+								{
+									"key": "category",
+									"value": null,
+									"description": "Category to change this submission to"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viewedVideoSponsorTime",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://sponsor.ajay.app/api/viewedVideoSponsorTime?UUID=",
+							"protocol": "https",
+							"host": [
+								"sponsor",
+								"ajay",
+								"app"
+							],
+							"path": [
+								"api",
+								"viewedVideoSponsorTime"
+							],
+							"query": [
+								{
+									"key": "UUID",
+									"value": "",
+									"description": "UUID of the segment viewed"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "segmentInfo",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sponsor.ajay.app/api/segmentInfo",
+							"protocol": "https",
+							"host": [
+								"sponsor",
+								"ajay",
+								"app"
+							],
+							"path": [
+								"api",
+								"segmentInfo"
+							],
+							"query": [
+								{
+									"key": "UUID",
+									"value": null,
+									"description": "can be repeated",
+									"disabled": true
+								},
+								{
+									"key": "UUIDS",
+									"value": "",
+									"description": "\"[\"abc\"]\"",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userID",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sponsor.ajay.app/api/userID",
+							"protocol": "https",
+							"host": [
+								"sponsor",
+								"ajay",
+								"app"
+							],
+							"path": [
+								"api",
+								"userID"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": null,
+									"description": "search string for username, case sensitive",
+									"disabled": true
+								},
+								{
+									"key": "exact",
+									"value": "false",
+									"description": "can be set to true",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lockCategories",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sponsor.ajay.app/api/lockCategories?videoID",
+							"protocol": "https",
+							"host": [
+								"sponsor",
+								"ajay",
+								"app"
+							],
+							"path": [
+								"api",
+								"lockCategories"
+							],
+							"query": [
+								{
+									"key": "videoID",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lockCategories SHA256",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sponsor.ajay.app/api/lockCategories?prefix",
+							"protocol": "https",
+							"host": [
+								"sponsor",
+								"ajay",
+								"app"
+							],
+							"path": [
+								"api",
+								"lockCategories"
+							],
+							"query": [
+								{
+									"key": "prefix",
+									"value": null,
+									"description": "Hash of the YouTube videoID"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stats Calls",
+			"item": [
+				{
+					"name": "getTopUsers",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sponsor.ajay.app/api/getTopUsers?sortType",
+							"protocol": "https",
+							"host": [
+								"sponsor",
+								"ajay",
+								"app"
+							],
+							"path": [
+								"api",
+								"getTopUsers"
+							],
+							"query": [
+								{
+									"key": "sortType",
+									"value": null,
+									"description": "0 for by minutes saved,  1 for by view count, 2 for by total submissions"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTotalStats",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sponsor.ajay.app/api/getTotalStats",
+							"protocol": "https",
+							"host": [
+								"sponsor",
+								"ajay",
+								"app"
+							],
+							"path": [
+								"api",
+								"getTotalStats"
+							],
+							"query": [
+								{
+									"key": "countContributingUsers",
+									"value": "false",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDaysSavedFormatted Copy",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sponsor.ajay.app/api/getDaysSavedFormatted",
+							"protocol": "https",
+							"host": [
+								"sponsor",
+								"ajay",
+								"app"
+							],
+							"path": [
+								"api",
+								"getDaysSavedFormatted"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "VIP Calls",
+			"item": [
+				{
+					"name": "lockCategories",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://sponsor.ajay.app/api/lockCategories?videoID&categories&reason",
+							"protocol": "https",
+							"host": [
+								"sponsor",
+								"ajay",
+								"app"
+							],
+							"path": [
+								"api",
+								"lockCategories"
+							],
+							"query": [
+								{
+									"key": "videoID",
+									"value": null
+								},
+								{
+									"key": "categories",
+									"value": null,
+									"description": "See https://github.com/ajayyy/SponsorBlock/wiki/Types#category"
+								},
+								{
+									"key": "reason",
+									"value": null,
+									"description": "Reason for lock"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lockCategories",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://sponsor.ajay.app/api/lockCategories?videoID&categories",
+							"protocol": "https",
+							"host": [
+								"sponsor",
+								"ajay",
+								"app"
+							],
+							"path": [
+								"api",
+								"lockCategories"
+							],
+							"query": [
+								{
+									"key": "videoID",
+									"value": null
+								},
+								{
+									"key": "categories",
+									"value": null,
+									"description": "See https://github.com/ajayyy/SponsorBlock/wiki/Types#category"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "shadowBanUser",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "adminUserID",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://sponsor.ajay.app/api/shadowBanUser?userID&enabled=true&unHideOldSubmissions=false",
+							"protocol": "https",
+							"host": [
+								"sponsor",
+								"ajay",
+								"app"
+							],
+							"path": [
+								"api",
+								"shadowBanUser"
+							],
+							"query": [
+								{
+									"key": "userID",
+									"value": null,
+									"description": "userID of user to ban"
+								},
+								{
+									"key": "enabled",
+									"value": "true",
+									"description": "enable or disable ban"
+								},
+								{
+									"key": "unHideOldSubmissions",
+									"value": "false",
+									"description": "should all previous submissions be banned as well"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "warnUser",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "issuerUserID",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://sponsor.ajay.app/api/warnUser?userID&enabled=true",
+							"protocol": "https",
+							"host": [
+								"sponsor",
+								"ajay",
+								"app"
+							],
+							"path": [
+								"api",
+								"warnUser"
+							],
+							"query": [
+								{
+									"key": "userID",
+									"value": null,
+									"description": "userID of user to ban"
+								},
+								{
+									"key": "enabled",
+									"value": "true",
+									"description": "enable or disable ban"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clearCache",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://sponsor.ajay.app/api/clearCache?videoID=",
+							"protocol": "https",
+							"host": [
+								"sponsor",
+								"ajay",
+								"app"
+							],
+							"path": [
+								"api",
+								"clearCache"
+							],
+							"query": [
+								{
+									"key": "videoID",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "purgeAllSegments",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://sponsor.ajay.app/api/purgeAllSegments?videoID=",
+							"protocol": "https",
+							"host": [
+								"sponsor",
+								"ajay",
+								"app"
+							],
+							"path": [
+								"api",
+								"purgeAllSegments"
+							],
+							"query": [
+								{
+									"key": "videoID",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "segmentShift",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://sponsor.ajay.app/api/segmentShift?videoID=&startTime&endTime",
+							"protocol": "https",
+							"host": [
+								"sponsor",
+								"ajay",
+								"app"
+							],
+							"path": [
+								"api",
+								"segmentShift"
+							],
+							"query": [
+								{
+									"key": "videoID",
+									"value": ""
+								},
+								{
+									"key": "startTime",
+									"value": null,
+									"description": "float"
+								},
+								{
+									"key": "endTime",
+									"value": null,
+									"description": "float"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin Calls",
+			"item": [
+				{
+					"name": "setUsername Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://sponsor.ajay.app/api/getUsername?userID&username",
+							"protocol": "https",
+							"host": [
+								"sponsor",
+								"ajay",
+								"app"
+							],
+							"path": [
+								"api",
+								"getUsername"
+							],
+							"query": [
+								{
+									"key": "userID",
+									"value": null,
+									"description": "Public userID of targeted user"
+								},
+								{
+									"key": "username",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addUserAsVIP",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "adminUserID",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://sponsor.ajay.app/api/addUserAsVIP?userID",
+							"protocol": "https",
+							"host": [
+								"sponsor",
+								"ajay",
+								"app"
+							],
+							"path": [
+								"api",
+								"addUserAsVIP"
+							],
+							"query": [
+								{
+									"key": "userID",
+									"value": null,
+									"description": "Public userID of the user you want to add to the VIP list"
+								},
+								{
+									"key": "enabled",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "apikey",
+				"apikey": [
+					{
+						"key": "in",
+						"value": "query",
+						"type": "string"
+					},
+					{
+						"key": "value",
+						"value": "abcdef",
+						"type": "string"
+					},
+					{
+						"key": "key",
+						"value": "adminUserID",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "abcdefg",
+				"type": "string"
+			},
+			{
+				"key": "in",
+				"value": "query",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "userID",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
