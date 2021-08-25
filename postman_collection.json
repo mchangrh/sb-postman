@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "68efe2a2-8f2c-4b5e-a4bf-2e0f6c9eccf0",
-		"name": "SponsorBlock PM v266",
+		"name": "SponsorBlock PM v267",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -473,7 +473,7 @@
 								{
 									"key": "type",
 									"value": null,
-									"description": "0 for downvote, 1 for upvote"
+									"description": "0 for downvote, 1 for upvote, 20 to undo vote"
 								}
 							]
 						}
