@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "68efe2a2-8f2c-4b5e-a4bf-2e0f6c9eccf0",
-		"name": "SponsorBlock PM v267",
+		"name": "SponsorBlock PM v268",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -260,6 +260,12 @@
 									"disabled": true
 								},
 								{
+									"key": "requiredSegment",
+									"value": null,
+									"description": "segment UUID to require to be retreived",
+									"disabled": true
+								},
+								{
 									"key": "requiredSegments",
 									"value": null,
 									"description": "list of segment UUIDs to require be retrieved",
@@ -312,6 +318,12 @@
 									"key": "categories",
 									"value": null,
 									"description": "use this instead of \"category\"",
+									"disabled": true
+								},
+								{
+									"key": "requiredSegment",
+									"value": null,
+									"description": "segment UUID to require to be retreived",
 									"disabled": true
 								},
 								{
