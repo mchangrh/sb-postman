@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "68efe2a2-8f2c-4b5e-a4bf-2e0f6c9eccf0",
-		"name": "SponsorBlock PM v268",
+		"name": "SponsorBlock PM v273",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -272,6 +272,18 @@
 									"disabled": true
 								},
 								{
+									"key": "actionType",
+									"value": null,
+									"description": "skip or mute",
+									"disabled": true
+								},
+								{
+									"key": "actionTypes",
+									"value": "",
+									"description": "array of actionTypes",
+									"disabled": true
+								},
+								{
 									"key": "service",
 									"value": "YouTube",
 									"description": "See https://github.com/ajayyy/SponsorBlock/wiki/Types#service",
@@ -330,6 +342,17 @@
 									"key": "requiredSegments",
 									"value": null,
 									"description": "list of segment UUIDs to require be retrieved",
+									"disabled": true
+								},
+								{
+									"key": "actionType",
+									"value": null,
+									"description": "skip or mute",
+									"disabled": true
+								},
+								{
+									"key": "actionTypes",
+									"value": null,
 									"disabled": true
 								},
 								{
