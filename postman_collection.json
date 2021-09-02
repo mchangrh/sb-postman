@@ -733,6 +733,163 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "searchSegments PARAM",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sponsor.ajay.app/api/searchSegments?videoID",
+							"protocol": "https",
+							"host": [
+								"sponsor",
+								"ajay",
+								"app"
+							],
+							"path": [
+								"api",
+								"searchSegments"
+							],
+							"query": [
+								{
+									"key": "videoID",
+									"value": null,
+									"description": "ID of video to pull segments for"
+								},
+								{
+									"key": "category",
+									"value": null,
+									"description": "See https://github.com/ajayyy/SponsorBlock/wiki/Types#category",
+									"disabled": true
+								},
+								{
+									"key": "categories",
+									"value": null,
+									"description": "use this instead of \"category\"",
+									"disabled": true
+								},
+								{
+									"key": "requiredSegment",
+									"value": null,
+									"description": "segment UUID to require to be retreived",
+									"disabled": true
+								},
+								{
+									"key": "requiredSegments",
+									"value": null,
+									"description": "list of segment UUIDs to require be retrieved",
+									"disabled": true
+								},
+								{
+									"key": "actionType",
+									"value": null,
+									"description": "skip or mute",
+									"disabled": true
+								},
+								{
+									"key": "actionTypes",
+									"value": "",
+									"description": "array of actionTypes",
+									"disabled": true
+								},
+								{
+									"key": "service",
+									"value": "YouTube",
+									"description": "See https://github.com/ajayyy/SponsorBlock/wiki/Types#service",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "0",
+									"description": "page to start searching from",
+									"disabled": true
+								},
+								{
+									"key": "minVotes",
+									"value": null,
+									"description": "vote threshold",
+									"disabled": true
+								},
+								{
+									"key": "maxVotes",
+									"value": null,
+									"description": "vote threshold",
+									"disabled": true
+								},
+								{
+									"key": "minViews",
+									"value": null,
+									"description": "view threshold",
+									"disabled": true
+								},
+								{
+									"key": "maxViews",
+									"value": null,
+									"description": "view threshold",
+									"disabled": true
+								},
+								{
+									"key": "locked",
+									"value": "true",
+									"description": "show locked segments",
+									"disabled": true
+								},
+								{
+									"key": "hidden",
+									"value": "true",
+									"description": "show hidden segments",
+									"disabled": true
+								},
+								{
+									"key": "ignored",
+									"value": "true",
+									"description": "show ignored segments",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchSegments JSON",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    videoID:\r\n    category:\r\n    //categories:\r\n    //requiredSegment:\r\n    //requiredSegments:\r\n    //actionType:\r\n    //actionTypes:\r\n    //service:YouTube\r\n    //page:0\r\n    //minVotes:\r\n    //maxVotes:\r\n    //minViews:\r\n    //maxViews:\r\n    //locked: true\r\n    //hidden: true\r\n    //ignored: true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://sponsor.ajay.app/api/searchSegments",
+							"protocol": "https",
+							"host": [
+								"sponsor",
+								"ajay",
+								"app"
+							],
+							"path": [
+								"api",
+								"searchSegments"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -820,6 +977,35 @@
 							"path": [
 								"api",
 								"getDaysSavedFormatted"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sponsor.ajay.app/api/status/:value",
+							"protocol": "https",
+							"host": [
+								"sponsor",
+								"ajay",
+								"app"
+							],
+							"path": [
+								"api",
+								"status",
+								":value"
+							],
+							"variable": [
+								{
+									"key": "value",
+									"value": null,
+									"description": "uptime, commit, db, startTime or processTime"
+								}
 							]
 						}
 					},
